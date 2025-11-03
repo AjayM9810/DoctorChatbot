@@ -9,7 +9,7 @@ import pandas as pd
 # import dateparser
 from datetime import datetime, timedelta
 
-save_dir = "D:\\Chat_bot\\bert-finetuned-final"
+save_dir = "bert-finetuned-final"
 
 url = "https://drive.google.com/file/d/1Cotxm7qcgRvioWO832GFcZmVsBBD1xBf/view?usp=drive_link"
 output = f"{save_dir}/model.safetensors"
@@ -334,3 +334,4 @@ def chatbot_reply(text1):
 #     print(f"Chatbot reply:\n{reply}")
 
 #     print("-" * 80)
+
