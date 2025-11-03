@@ -1,0 +1,18 @@
+# Core ML + NLP
+transformers
+torch
+
+# String matching
+rapidfuzz
+
+# Serialization
+joblib
+
+# Data handling
+pandas
+
+# Streamlit UI
+streamlit
+
+# use Google Drive downloads
+gdown
