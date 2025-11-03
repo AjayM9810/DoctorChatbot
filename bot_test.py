@@ -4,11 +4,16 @@ from datetime import time, datetime, timedelta
 import joblib
 from rapidfuzz import process
 import re
+import gdown
 import pandas as pd
 # import dateparser
 from datetime import datetime, timedelta
 
 save_dir = "D:\\Chat_bot\\bert-finetuned-final"
+
+url = "https://drive.google.com/file/d/1Cotxm7qcgRvioWO832GFcZmVsBBD1xBf/view?usp=drive_link"
+output = f"{save_dir}/model.safetensors"
+gdown.download(url, output, quiet=False)
 
 # Reload model + tokenizer
 model = DistilBertForSequenceClassification.from_pretrained(save_dir)
@@ -327,4 +332,5 @@ def chatbot_reply(text1):
 #     print(f"Query: {q}")
 #     print(f"Predicted intent: {intent}")
 #     print(f"Chatbot reply:\n{reply}")
+
 #     print("-" * 80)
