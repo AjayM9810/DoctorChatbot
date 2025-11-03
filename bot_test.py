@@ -4,16 +4,17 @@ from datetime import time, datetime, timedelta
 import joblib
 from rapidfuzz import process
 import re
-import gdown
+import gdown, os
 import pandas as pd
-# import dateparser
 from datetime import datetime, timedelta
 
 save_dir = "bert-finetuned-final"
 
-url = "https://drive.google.com/file/d/1Cotxm7qcgRvioWO832GFcZmVsBBD1xBf/view?usp=drive_link"
+url = "https://drive.google.com/uc?id=1Cotxm7qcgRvioWO832GFcZmVsBBD1xBf"
 output = f"{save_dir}/model.safetensors"
-gdown.download(url, output, quiet=False)
+
+if not os.path.exists(output):
+    gdown.download(url, output, quiet=False, fuzzy=True)
 
 # Reload model + tokenizer
 model = DistilBertForSequenceClassification.from_pretrained(save_dir)
@@ -334,4 +335,5 @@ def chatbot_reply(text1):
 #     print(f"Chatbot reply:\n{reply}")
 
 #     print("-" * 80)
+
 
