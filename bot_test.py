@@ -321,22 +321,3 @@ def chatbot_reply(text1):
         return intent, f"{doc['Name']} → Description: {doc['Description']}"
 
     return intent, "Sorry, I couldn’t map that symptom."
-
-
-# queries = [
-#     "Find a cardiology doctor",
-#     "Next",
-#     "Next",
-#     "Next",
-#     "Previous",
-#     "Previous"]
-# for q in queries:
-#     intent, reply = chatbot_reply(q)
-#     print(f"Query: {q}")
-#     print(f"Predicted intent: {intent}")
-#     print(f"Chatbot reply:\n{reply}")
-
-#     print("-" * 80)
-
-
-
