@@ -223,6 +223,8 @@ def chatbot_reply(text1):
         intent = "doctor_description"
     if "address" in text1.lower() or "location" in text1.lower():
         intent = "doctor_address"
+    if "contact" in text1.lower() or "phone" in text1.lower() or "number" in text1.lower():
+        intent = "doctor_contact"
     # INTENT HANDLING
     if intent == "find_doctor_by_speciality":
         group = find_speciality_group(text1, doctors_df)
@@ -335,5 +337,6 @@ def chatbot_reply(text1):
 #     print(f"Chatbot reply:\n{reply}")
 
 #     print("-" * 80)
+
 
 
