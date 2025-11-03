@@ -16,3 +16,5 @@ streamlit
 
 # use Google Drive downloads
 gdown
+
+scikit-learn
