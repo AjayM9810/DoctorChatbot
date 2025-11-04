@@ -16,10 +16,12 @@ This repository contains the code, dataset, and deployment scripts for the proje
    git clone https://github.com/AjayM9810/doctor-finder-chatbot.git
    cd doctor-finder-chatbot
 
-** Create Virtual Environment And Install Dependencies**
+**Create Virtual Environment And Install Dependencies**
 
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+
+**Read The PDF file for more info**
 
 App link : https://doctorchatbot-xsq7xmwgnzzzwwzkjbp7ga.streamlit.app
